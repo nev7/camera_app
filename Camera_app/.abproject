@@ -1,0 +1,45 @@
+{
+  "ProjectName": "Camera_app",
+  "ProjectGuid": "da308e8b-54c6-4a67-a46c-94fa5b4c36da",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Cameraapp",
+  "DisplayName": "Camera_app",
+  "Author": "",
+  "Description": "Camera_app",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{42b0e38a-122f-42f7-a58a-30725db7a280}",
+  "WP8ProductID": "{001c381b-2727-426f-a496-0e73997cc58e}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.Cameraapp",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
