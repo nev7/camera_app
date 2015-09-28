@@ -27,22 +27,44 @@ under the License.
         <title>Camera App</title>
     </head>
     <body>
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                <i class="fa fa-bars"></i> Menu <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">
+                    <a role="menuitem" href="index.html">
+                        <i class="fa fa-university"></i>&nbsp;&nbsp;Home
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="Statistics.html">
+                        <i class="fa fa-bar-chart"></i>&nbsp;&nbsp;Statistics
+                    </a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation">
+                    <a role="menuitem" href="#">
+                        <i class="fa fa-info"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h1><b>Camera Test App</b></h1>
         <div id="main">
-            <h1>Camera Test App</h1>
-            <br/>
             <div class="capital_box">
                 <label class="thumb_title">Paris</label>
                 <div class="Picture">
                     <img id="Paris"/>
                 </div>
                 <div class="thumbNav">
-                    <div class="icons_takeBrowseParis">
+                    <div class="icons_takeBrowseParis icons">
                         <i id="pic_paris"class="fa fa-camera fa-2x take iconsTB"></i>
                     </div>
-                    <div class="icons_takeBrowseParis">
-                        <i id="browse_paris" class="fa fa-file-image-o fa-2x browse iconsTB"></i>
+                    <div class="icons_takeBrowseParis icons">
+                        <i id="browse_paris" class="fa fa-folder-open fa-2x browse iconsTB"></i>
                     </div>
-                    <div class="icons_del">
+                    <div class="icons_del icons">
                         <i id="delete_paris" class="fa fa-times fa-2x"></i>
                     </div>
                 </div>
@@ -54,13 +76,13 @@ under the License.
                     <img id="London"/>
                 </div>
                 <div class="thumbNav">
-                    <div class="icons_takeBrowseLondon">
+                    <div class="icons_takeBrowseLondon icons">
                         <i id="pic_london"class="fa fa-camera fa-2x take iconsTB"></i>
                     </div>
-                    <div class="icons_takeBrowseLondon">
-                        <i id="browse_london" class="fa fa-file-image-o fa-2x browse iconsTB"></i>
+                    <div class="icons_takeBrowseLondon icons">
+                        <i id="browse_london" class="fa fa-folder-open fa-2x browse iconsTB"></i>
                     </div>
-                    <div class="icons_del">
+                    <div class="icons_del icons">
                         <i id="delete_london" class="fa fa-times fa-2x"></i>
                     </div>
                 </div>
@@ -72,13 +94,13 @@ under the License.
                     <img id="Madrid"/>
                 </div>
                 <div class="thumbNav">
-                    <div class="icons_takeBrowseMadrid">
+                    <div class="icons_takeBrowseMadrid icons">
                         <i id="pic_madrid"class="fa fa-camera fa-2x take iconsTB"></i>
                     </div>
-                    <div class="icons_takeBrowseMadrid">
-                        <i id="browse_madrid" class="fa fa-file-image-o fa-2x browse iconsTB"></i>
+                    <div class="icons_takeBrowseMadrid icons">
+                        <i id="browse_madrid" class="fa fa-folder-open fa-2x browse iconsTB"></i>
                     </div>
-                    <div class="icons_del">
+                    <div class="icons_del icons">
                         <i id="delete_madrid" class="fa fa-times fa-2x"></i>
                     </div>
                 </div>
@@ -89,13 +111,13 @@ under the License.
                     <img id="Berlin"/>
                 </div>
                 <div class="thumbNav">
-                    <div class="icons_takeBrowseBerlin">
+                    <div class="icons_takeBrowseBerlin icons">
                         <i id="pic_berlin"class="fa fa-camera fa-2x take iconsTB"></i>
                     </div>
-                    <div class="icons_takeBrowseBerlin">
-                        <i id="browse_berlin" class="fa fa-file-image-o fa-2x browse iconsTB"></i>
+                    <div class="icons_takeBrowseBerlin icons">
+                        <i id="browse_berlin" class="fa fa-folder-open fa-2x browse iconsTB"></i>
                     </div>
-                    <div class="icons_del">
+                    <div class="icons_del icons">
                         <i id="delete_berlin" class="fa fa-times fa-2x"></i>
                     </div>
                 </div>
@@ -106,13 +128,13 @@ under the License.
                     <img id="Vienna"/>
                 </div>
                 <div class="thumbNav">
-                    <div class="icons_takeBrowseVienna">
+                    <div class="icons_takeBrowseVienna icons">
                         <i id="pic_vienna"class="fa fa-camera fa-2x take iconsTB"></i>
                     </div>
-                    <div class="icons_takeBrowseVienna">
-                        <i id="browse_vienna" class="fa fa-file-image-o fa-2x browse iconsTB"></i>
+                    <div class="icons_takeBrowseVienna icons">
+                        <i id="browse_vienna" class="fa fa-folder-open fa-2x browse iconsTB"></i>
                     </div>
-                    <div class="icons_del">
+                    <div class="icons_del icons">
                         <i id="delete_vienna" class="fa fa-times fa-2x"></i>
                     </div>
                 </div>
@@ -124,13 +146,13 @@ under the License.
                     <img id="Sofia"/>
                 </div>
                 <div class="thumbNav">
-                    <div class="icons_takeBrowseSofia">
+                    <div class="icons_takeBrowseSofia icons">
                         <i id="pic_sofia"class="fa fa-camera fa-2x take iconsTB"></i>
                     </div>
-                    <div class="icons_takeBrowseSofia">
-                        <i id="browse_sofia" class="fa fa-file-image-o fa-2x browse iconsTB"></i>
+                    <div class="icons_takeBrowseSofia icons">
+                        <i id="browse_sofia" class="fa fa-folder-open fa-2x browse iconsTB"></i>
                     </div>
-                    <div class="icons_del">
+                    <div class="icons_del icons">
                         <i id="delete_sofia" class="fa fa-times fa-2x"></i>
                     </div>
                 </div>

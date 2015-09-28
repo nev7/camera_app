@@ -28,7 +28,7 @@ app.camera = {
             $(getID).off('click');
         }
         function onErr(msg) {
-            alert("FAILED BACAUSE: " + msg);
+            console.log("FAILED BACAUSE: " + msg);
         }
         
         function createThumbnail(URL) {

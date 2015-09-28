@@ -55,12 +55,24 @@ app.Events = {
             $parent.find(takeID).on('click', function() {
                 $(id).show();
                 app.camera.capturePhoto(colName, takeID, getID)
-                
             });
             $parent.find(getID).on('click', function() {
                 $(id).show();                
                 app.camera.getPhoto(colName, takeID, getID);
             });
         }
+    },
+    
+    MenuButton: function() {
+        $("#menu").click(function() {
+            
+        });
     }
 }
+
+/*cordova.exec(function(result) {
+                alert("Free space available: " + result);
+            }, 
+                         function(error) {
+                             alert("Error is:  " + error);
+                         }, "File", "getFreeDiskSpace", []);*/
