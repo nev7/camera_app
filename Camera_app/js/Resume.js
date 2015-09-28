@@ -16,20 +16,11 @@ app.Resume = {
                 
                 tx.executeSql(SQLtext, [], function(tx, res) {  //onSuccess
                     try {
-                        
                         var imgData = res.rows.item(0).dataURL;
                       
                         $('#' + city).attr('src', imgData);  
-                        
                     } catch (ex) {
-                        
-                        /*if (imgData === undefined) {  
-                            var bg = document.getElementsByClassName('Picture');
-                            document.bg.style.backgroundImage = "url('img/NA.png')";
-                        }*/
-                        //console.log(ex + " " + "The imgData is: " + imgData);
                     }
-                    
                 }, function(err) {                              //onErr
                     console.log('Error: ' + err);
                 });

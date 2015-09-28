@@ -7,7 +7,7 @@ using the device camera API
 
 app.camera = {
     
-    capturePhoto: function(id) {
+    capturePhoto: function(id, takeID, getID) {
         var db = app.DB.initDB();
         var that = this;
 
@@ -17,20 +17,21 @@ app.camera = {
         navigator.camera.getPicture(onSuccess, onErr, {
                                         quality: 50,
                                         destinationType: that.destinationType.DATA_URL,
-                                        saveToPhotoAlbum: false,
+                                        saveToPhotoAlbum: true,
                                         targetHeight: 600,
                                         targetWidth: 800                                      
                                     });
         
         function onSuccess(imageData) {
             createThumbnail(imageData);
+            $(takeID).off('click');
+            $(getID).off('click');
         }
         function onErr(msg) {
-            console.log("FAILED BACAUSE: " + msg);
+            alert("FAILED BACAUSE: " + msg);
         }
         
         function createThumbnail(URL) {
-           
             var img = document.getElementById(id);
             var fullSrc = "data:image/jpeg;base64," + URL;
             img.src = fullSrc;
@@ -65,7 +66,7 @@ app.camera = {
         }
     },
     
-    getPhoto: function(id) {
+    getPhoto: function(id, takeID, getID) {
         var db = app.DB.initDB();
         // Retrieve image file location from specified source
         navigator.camera.getPicture(onPhotoURISuccess, onFail, {
@@ -76,6 +77,8 @@ app.camera = {
         
         function onPhotoURISuccess(imageURI) {
             createThumbnail(imageURI);
+            $(takeID).off('click');
+            $(getID).off('click');
         }
         
         function createThumbnail(URL) {
@@ -116,11 +119,3 @@ app.camera = {
         }
     }
 }
-
-
-/*
- targetHeight:
-        748,
-        targetWidth
-        : 1024
-*/

@@ -17,9 +17,8 @@ app.Events = {
             var $city = $img.attr('id');
             var $takeIcon = $parent.find('i').attr('id');
             var $browseIcon = $parent.find('[class*="browse"]').attr('id');
-            
+
             var src = $img[0].src;
-            
             if (src.length < 1) {
                 onTakeBrowseClick($city, $takeIcon, $browseIcon);
             }
@@ -49,32 +48,19 @@ app.Events = {
     BindButtons: function($parent, colName, id, takeID, getID) {
         $parent.find(takeID).off('click');
         $parent.find(getID).off('click');
-        var pic = $parent.find('img').attr('src');
-
-        if (pic.length < 1) {
+        
+        bindings();
+        
+        function bindings() {
             $parent.find(takeID).on('click', function() {
-
                 $(id).show();
-                app.camera.capturePhoto(colName);
-                /*var src = jQuery(id)[0].src;
-
-                if (src.length < 1) {
-                    app.camera.capturePhoto(colName);
-                }*/
+                app.camera.capturePhoto(colName, takeID, getID)
+                
             });
-            
             $parent.find(getID).on('click', function() {
-
-                $(id).show();
-                
-                var src = jQuery(id)[0].src;
-                
-                if (src.length < 1) {
-                    app.camera.getPhoto(colName);
-                }
+                $(id).show();                
+                app.camera.getPhoto(colName, takeID, getID);
             });
-        } else if (pic.length > 0) {
-            $parent.find('.iconsTB').off('click');
         }
     }
-} 
+}

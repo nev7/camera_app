@@ -39,10 +39,6 @@ app.preview = {
             preview("Sofia", bg, sofiaClone, largePic);
             
             function preview(id, bgID, clone, largeID) {
-                //var $winWidth = $(window).width();
-                //var $winHeight = $(window).height();
-                
-                //if (clone.width() > $winWidth && clone.height() > $winHeight) {
                 
 
                 if (target[0].id === id) {
