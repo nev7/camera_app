@@ -23,7 +23,6 @@ var app = {
     
     attachEvents: function() {
         app.Events.takeBrowse();
-        app.Events.MenuButton();
         app.preview.center();
         app.Del.deletePhoto();
         app.Resume.onResume();

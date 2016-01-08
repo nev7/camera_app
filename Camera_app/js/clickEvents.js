@@ -8,10 +8,8 @@ else it unbinds it until picture is deleted
 
 app.Events = {
     takeBrowse: function() {
-        $('.iconsTB').unbind('click');
-        $('.iconsTB').off('click');
-        $('.iconsTB').on('click', function(event) {
-            var $target = $(event.target);
+        $('.iconsTB').off('click').on('click', function(e) {
+            var $target = $(e.target);
             var $parent = $target.parents('.capital_box');
             var $img = $parent.find('img');
             var $city = $img.attr('id');
@@ -24,26 +22,19 @@ app.Events = {
             }
             
             function onTakeBrowseClick(cityName, takeID, getID) {
-                if (!$("#" + cityName).attr('src')) {
+                if (!jQuery("#" + cityName).attr('src')) {
                     if ($target.hasClass('take')) {
-                        $('#' + cityName).show();
-                        app.camera.capturePhoto(cityName);   
+                        jQuery('#' + cityName).show();
+                        app.camera.capturePhoto(cityName, takeID, getID);   
                     }
                     if ($target.hasClass('browse')) {
-                        $('#' + cityName).show();
-                        app.camera.getPhoto(cityName);
+                        jQuery('#' + cityName).show();
+                        app.camera.getPhoto(cityName, takeID, getID);
                     } 
-                    
-                    if ($img.attr('src')) {
-                        $parent.find('.iconsTB').off('click');
-                        $parent.find(takeID).off('click');
-                        $parent.find(getID).off('click');
-                    }
                 }
             }
         });
     },
-    
            
     BindButtons: function($parent, colName, id, takeID, getID) {
         $parent.find(takeID).off('click');
@@ -61,18 +52,5 @@ app.Events = {
                 app.camera.getPhoto(colName, takeID, getID);
             });
         }
-    },
-    
-    MenuButton: function() {
-        $("#menu").click(function() {
-            
-        });
     }
 }
-
-/*cordova.exec(function(result) {
-                alert("Free space available: " + result);
-            }, 
-                         function(error) {
-                             alert("Error is:  " + error);
-                         }, "File", "getFreeDiskSpace", []);*/
